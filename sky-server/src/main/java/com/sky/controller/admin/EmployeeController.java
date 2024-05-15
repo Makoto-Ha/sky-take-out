@@ -100,9 +100,33 @@ public class EmployeeController {
 
     @PostMapping("/status/{status}")
     @ApiOperation("啟用禁用員工帳號")
-    public Result update(@PathVariable("status") Integer status, Long id) {
+    public Result updateStatus(@PathVariable("status") Integer status, Long id) {
         log.info("啟用禁用員工帳號，{} {}", status, id);
-        employeeService.update(status, id);
+        employeeService.updateStatus(status, id);
+        return Result.success();
+    }
+    /**
+     * 根據id獲取員工信息
+     * @param id
+     * @return
+     */
+    @GetMapping("/{id}")
+    @ApiOperation("根據id獲取員工信息")
+    public Result<Employee> getById(@PathVariable Long id) {
+        Employee employee = employeeService.getById(id);
+        return Result.success(employee);
+    }
+
+    /**
+     * 編輯員工信息
+     * @param employeeDTO
+     * @return
+     */
+    @PutMapping
+    @ApiOperation("編輯員工信息")
+    public Result update(@RequestBody EmployeeDTO employeeDTO) {
+        log.info("編輯員工信息: {}", employeeDTO);
+        employeeService.update(employeeDTO);
         return Result.success();
     }
 }
