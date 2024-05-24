@@ -36,4 +36,11 @@ public class ShoppingCartContronller {
     List<ShoppingCart> list = shoppingCartService.showShoppingCart();
     return Result.success(list);
   }
+
+  @DeleteMapping("/clean")
+  @ApiOperation("清空購物車")
+  public Result clean() {
+    shoppingCartService.cleanShoppingCart();
+    return Result.success();
+  }
 }
