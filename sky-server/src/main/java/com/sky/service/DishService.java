@@ -46,5 +46,5 @@ public interface DishService {
    * @param dish
    * @return
    */
-  List<DishVO> listWithFlavor(Dish dish);
+//  List<DishVO> listWithFlavor(Dish dish);
 }

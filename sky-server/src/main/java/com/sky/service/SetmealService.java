@@ -15,13 +15,13 @@ public interface SetmealService {
      * @param setmeal
      * @return
      */
-    List<Setmeal> list(Setmeal setmeal);
+//    List<Setmeal> list(Setmeal setmeal);
 
     /**
      * 根据id查询菜品选项
      * @param id
      * @return
      */
-    List<DishItemVO> getDishItemById(Long id);
+//    List<DishItemVO> getDishItemById(Long id);
 
 }
