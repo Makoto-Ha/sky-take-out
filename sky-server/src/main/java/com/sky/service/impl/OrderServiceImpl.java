@@ -30,6 +30,7 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class OrderServiceImpl implements OrderService {
@@ -164,4 +165,22 @@ public class OrderServiceImpl implements OrderService {
     webSocketServer.sendToAllClient(json);
   }
 
+  /**
+   * 客戶催單
+   * @param id
+   */
+  @Override
+  public void reminder(Long id) {
+//    Orders ordersDB = orderMapper.getById(id);
+//
+//    if(ordersDB == null) {
+//      throw new OrderBusinessException(MessageConstant.ORDER_STATUS_ERROR);
+//    }
+//    Map map = new HashMap();
+//    map.put("type", 2);
+//    map.put("orderId", id);
+//    map.put("content", "訂單號: " + ordersDB.getNumber());
+//    String json = JSON.toJSONString(map);
+//    webSocketServer.sendToAllClient(json);
+  }
 }
