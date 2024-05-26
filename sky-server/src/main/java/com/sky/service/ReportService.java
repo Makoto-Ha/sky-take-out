@@ -1,6 +1,7 @@
 package com.sky.service;
 
 import com.sky.vo.TurnoverReportVO;
+import com.sky.vo.UserReportVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -16,4 +17,12 @@ public interface ReportService {
    * @return
    */
   TurnoverReportVO getTurnoverStatistics(LocalDate begin, LocalDate end);
+
+  /**
+   * 統計指定時間區間內的用戶數據
+   * @param begin
+   * @param end
+   * @return
+   */
+  UserReportVO getUserStatistics(LocalDate begin, LocalDate end);
 }
