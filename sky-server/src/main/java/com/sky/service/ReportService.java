@@ -7,6 +7,7 @@ import com.sky.vo.UserReportVO;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletResponse;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -43,4 +44,10 @@ public interface ReportService {
    * @return
    */
   SalesTop10ReportVO getSalesTop10Statistics(LocalDate begin, LocalDate end);
+
+  /**
+   * 倒出運營數據報表
+   * @param response
+   */
+  void exportBusinessDate(HttpServletResponse response);
 }
